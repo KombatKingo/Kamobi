@@ -1,20 +1,20 @@
 {
     "email": {
-        "host": "smtp.gmail.com",
-        "username": "noreply@kamobi-app.site",
-        "password": "Q.M^6]#Fn?p-0"
+        "host": "",
+        "username": "",
+        "password": ""
     },
 	"sms":{
-		"service_plan_id":"3a93996c8d2d4cb8b400ce21f6b8d449",
-		"api_key":"fbc76eb4fb564b17abd77b2efba46215",
-		"phone_number":"447860019783"
+		"service_plan_id":"",
+		"api_key":"",
+		"phone_number":""
 	},
     "database": {
-        "username": "user",
-        "password": "password",
-        "filename": "production.sqlite"
+        "username": "",
+        "password": "",
+        "filename": ""
     },
     "google_maps": {
-        "api_key": "AIzaSyBxU3m16AJkN-ZsY7iemY4UN7OuupfTdBU"
+        "api_key": ""
     }
 }
