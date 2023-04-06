@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false,
 			unique: true,
 		},
-		email: {
+		phoneNumber: {
 			type: DataTypes.STRING,
 			allowNull: false,
 			unique: true,
@@ -16,11 +16,13 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		confirmedEmail: {
+		confirmedSMS: {
 			type: DataTypes.BOOLEAN,
 			allowNull: false,
 			defaultValue: false,
 		},
 		
+	}, {
+		timestamps: false,
 	});
 };

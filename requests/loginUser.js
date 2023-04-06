@@ -9,10 +9,10 @@ module.exports = {
 	data: {name:"loginUser"},
 	async execute(data, res, socket, io, models, transporter){
 		try{
-			let user=await models.users.findOne({where:{[Op.or]:{email:data.loginname, username:data.loginname,}, password:data.password}})
+			let user=await models.users.findOne({where:{[Op.or]:{phoneNumber:data.loginname, username:data.loginname,}, password:data.password}})
 			if(user){
 				socket.user=user
-				return res({success:true, username:user.username, email:user.email, confirmedEmail:user.confirmedEmail})
+				return res({success:true, username:user.username, phoneNumber:user.phoneNumber, confirmedSMS:user.confirmedSMS})
 			}else{
 				return res({success:false,error:{code:2, description:"No user with that username/email and password exists."}})
 			}

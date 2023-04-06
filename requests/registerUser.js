@@ -9,13 +9,13 @@ module.exports = {
 	data: {name:"registerUser"},
 	async execute(data, res, socket, io, models, transporter){
 		try{
-			let user=await models.users.findOne({where:{email:data.email, username:data.username,},})
+			let user=await models.users.findOne({where:{phoneNumber:data.phoneNumber, username:data.username,},})
 			if(user){
-				user.confirmedEmail=true
+				user.confirmedSMS=true
 				await user.save()
 				return res({success:true})
 			}else{
-				return res({success:false,error:{code:2, description:"Took too long to confirm your email, try registering again."}})
+				return res({success:false,error:{code:2, description:"Took too long to confirm your phone number, try registering again."}})
 			}
 			
 		}catch(e){
